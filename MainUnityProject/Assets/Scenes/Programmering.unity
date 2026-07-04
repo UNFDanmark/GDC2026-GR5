@@ -1342,7 +1342,7 @@ GameObject:
   - component: {fileID: 1681169360}
   - component: {fileID: 1681169359}
   m_Layer: 0
-  m_Name: Wall (3)
+  m_Name: Dooe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
