@@ -1,25 +1,40 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float sensitivity = 2f;
-    float xRotation = 0f;
+
+    // Declare Camera Movement Variables
+    public InputAction turnAction;
+    public float sensitivity;
+    GameObject go;
+    float yaw;
+    float pitch;
+    public Transform camera;
+    
+    
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Enable Camera Movement
+        turnAction.Enable();
+        go = GetComponent<GameObject>();
+       
     }
-
-    
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
+        // Calculate Camera Movement
+        Vector2 moveInput = turnAction.ReadValue<Vector2>();
+        pitch += moveInput.y * -sensitivity * Time.deltaTime;
+        yaw += moveInput.x * sensitivity * Time.deltaTime;
 
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        // Anti Neck Breaking
+        pitch = Mathf.Clamp(pitch, -85f, 85f);
+        yaw = Mathf.Repeat(yaw, 360);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        transform.parent.Rotate(Vector3.up * mouseX);
+        // Set Rotation
+        transform.rotation = Quaternion.Euler(0f, yaw, 0f);
+        camera.localRotation = Quaternion.Euler(pitch, 0f, 0f);
+        
+
     }
 }

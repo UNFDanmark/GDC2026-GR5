@@ -18,18 +18,18 @@ public class PlayerMovement : MonoBehaviour
         
         // Set Movement Speed
         speed = 10;
-       
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        
     }
     void Update()
     {
         // Calculate Player Movement
         Vector2 moveInput = moveAction.ReadValue<Vector2>();
-        Vector3 newVelocity = rb.linearVelocity;
-        
-        newVelocity.x = moveInput.x * speed; 
-        newVelocity.z = moveInput.y * speed;
+        Vector3 moveRelative = new Vector3(moveInput.x, 0f, moveInput.y)*speed;
 
-        rb.linearVelocity = newVelocity;
+        rb.AddRelativeForce(moveRelative);
 
     }
 }
