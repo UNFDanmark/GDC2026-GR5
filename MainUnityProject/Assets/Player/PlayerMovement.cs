@@ -18,9 +18,6 @@ public class PlayerMovement : MonoBehaviour
         moveAction.Enable();
         crouchAction.Enable();
         rb = GetComponent<Rigidbody>();
-        
-        // Set Movement Speed
-        speed = 10;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
