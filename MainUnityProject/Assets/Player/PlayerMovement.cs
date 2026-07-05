@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 moveRelative = new Vector3(moveInput.x, 0f, moveInput.y)*crouchSpeed;    
             rb.AddRelativeForce(moveRelative);
+            //Add Size adjustement 'ere
         }
         else
         {
