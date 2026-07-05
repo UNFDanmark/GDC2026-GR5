@@ -12,7 +12,13 @@ public class Interaction : MonoBehaviour
     public Transform camera;
 
     public InputAction interactionAction;
-    
+
+
+    void Start()
+    {
+        interactionAction.Enable();
+    }
+
     void Update()
     {
         var myLayer = LayerMask.GetMask("Interactables");
