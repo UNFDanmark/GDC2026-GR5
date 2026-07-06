@@ -8,7 +8,6 @@ public class Interaction : MonoBehaviour
     RaycastHit hit;
 
     public float interactionDistance = 8f;
-    // bool isInInteractive;
 
     public Transform camera;
 
@@ -16,6 +15,7 @@ public class Interaction : MonoBehaviour
 
     public GameObject e;
     public GameObject paperClue1;
+    public bool isInInteractableUI;
 
 
     void Start()
@@ -23,6 +23,24 @@ public class Interaction : MonoBehaviour
         interactionAction.Enable();
     }
 
+    public void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void ExitInteractableUI()
+    {
+        isInInteractableUI = false;
+        LockCursor();
+    }
+    
     void Update()
     {
         var myLayer = LayerMask.GetMask("Interactables");
@@ -34,11 +52,12 @@ public class Interaction : MonoBehaviour
             
             if (interactionAction.WasPerformedThisFrame())
             {
+                isInInteractableUI = true;
+                
                 if (hit.transform.CompareTag("PaperClue1"))
                 {
                     paperClue1.SetActive(true);
-                    Cursor.lockState = CursorLockMode.None;
-                    Cursor.visible = true;
+                    UnlockCursor();
                     
                 }
 
@@ -51,6 +70,7 @@ public class Interaction : MonoBehaviour
         else
         {
             e.SetActive(false);
+            
         }
     }
 

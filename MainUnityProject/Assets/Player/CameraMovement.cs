@@ -11,6 +11,7 @@ public class CameraMovement : MonoBehaviour
     float yaw;
     float pitch;
     public Transform camera;
+    public Interaction InteractionUIBorrowed;
     
     
     void Start()
@@ -22,6 +23,10 @@ public class CameraMovement : MonoBehaviour
     }
     void Update()
     {
+        if (InteractionUIBorrowed.isInInteractableUI)
+            return;
+        
+        
         // Calculate Camera Movement
         Vector2 moveInput = turnAction.ReadValue<Vector2>();
         pitch += moveInput.y * -sensitivity * Time.deltaTime;
