@@ -8,6 +8,7 @@ public class Interaction : MonoBehaviour
     RaycastHit hit;
 
     public float interactionDistance = 8f;
+    // bool isInInteractive;
 
     public Transform camera;
 
@@ -36,6 +37,9 @@ public class Interaction : MonoBehaviour
                 if (hit.transform.CompareTag("PaperClue1"))
                 {
                     paperClue1.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    
                 }
 
                 if (hit.transform.CompareTag("ChestPuzzle1"))
