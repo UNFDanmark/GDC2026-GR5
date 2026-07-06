@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float crouchSpeed;
     public InputAction crouchAction;
     public Interaction InteractionUIBorrowed;
+    public float playerSize;
     
     
     void Start()
@@ -28,8 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (InteractionUIBorrowed.isInInteractableUI)
             return;
-
-
+        
         
         // Calculate Player Movement
         Vector2 moveInput = moveAction.ReadValue<Vector2>();
@@ -38,13 +38,32 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 moveRelative = new Vector3(moveInput.x, 0f, moveInput.y)*crouchSpeed;    
             rb.AddRelativeForce(moveRelative);
-            //Add Size adjustement 'ere
         }
         else
         {
             Vector3 moveRelative = new Vector3(moveInput.x, 0f, moveInput.y)*speed;
             rb.AddRelativeForce(moveRelative);
+            
+            
         }
 
+        if (crouchAction.WasPerformedThisFrame())
+        {
+            Vector3 currentScale = transform.localScale; 
+            currentScale.y = playerSize / 2;
+            transform.localScale = currentScale;
+
+        }
+        else if (crouchAction.WasReleasedThisFrame())
+        {
+            Vector3 currentScale = transform.localScale; 
+            currentScale.y = playerSize;
+            transform.localScale = currentScale;
+            
+        }
+        
+
     }
+
+
 }
