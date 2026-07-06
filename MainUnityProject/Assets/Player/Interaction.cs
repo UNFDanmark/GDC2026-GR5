@@ -13,6 +13,8 @@ public class Interaction : MonoBehaviour
 
     public InputAction interactionAction;
 
+    public GameObject e;
+
 
     void Start()
     {
@@ -26,6 +28,8 @@ public class Interaction : MonoBehaviour
 
         if (hitSomething)
         {
+            e.SetActive(true);
+            
             if (interactionAction.WasPerformedThisFrame())
             {
                 if (hit.transform.CompareTag("PaperClue1"))
@@ -38,6 +42,10 @@ public class Interaction : MonoBehaviour
                     print("ChestPuzzle1 found!");
                 }
             }
+        }
+        else
+        {
+            e.SetActive(false);
         }
     }
 
