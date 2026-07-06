@@ -14,6 +14,7 @@ public class Interaction : MonoBehaviour
     public InputAction interactionAction;
 
     public GameObject e;
+    public GameObject paperClue1;
 
 
     void Start()
@@ -34,7 +35,7 @@ public class Interaction : MonoBehaviour
             {
                 if (hit.transform.CompareTag("PaperClue1"))
                 {
-                    print("PaperClue1 found!");
+                    paperClue1.SetActive(true);
                 }
 
                 if (hit.transform.CompareTag("ChestPuzzle1"))
