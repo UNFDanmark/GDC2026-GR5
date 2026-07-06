@@ -15,6 +15,7 @@ public class Interaction : MonoBehaviour
 
     public GameObject e;
     public GameObject paperClue1;
+    public GameObject padlockPuzzle1;
     public bool isInInteractableUI;
 
 
@@ -61,9 +62,10 @@ public class Interaction : MonoBehaviour
                     
                 }
 
-                if (hit.transform.CompareTag("ChestPuzzle1"))
+                if (hit.transform.CompareTag("PadlockPuzzle1"))
                 {
-                    print("ChestPuzzle1 found!");
+                    padlockPuzzle1.SetActive(true);
+                    UnlockCursor();
                 }
             }
         }

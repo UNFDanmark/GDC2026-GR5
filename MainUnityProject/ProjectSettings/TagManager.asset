@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PaperClue1
   - ChestPuzzle1
+  - PadlockPuzzle1
   layers:
   - Default
   - TransparentFX
