@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     public float crouchSpeed;
     public InputAction crouchAction;
+    public Interaction InteractionUIBorrowed;
     
     
     void Start()
@@ -25,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        if (InteractionUIBorrowed.isInInteractableUI)
+            return;
+
+
+        
         // Calculate Player Movement
         Vector2 moveInput = moveAction.ReadValue<Vector2>();
 
