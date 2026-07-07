@@ -16,6 +16,8 @@ public class Interaction : MonoBehaviour
     public GameObject e;
     public GameObject paperClue1;
     public GameObject padlockPuzzle1;
+    public GameObject DeskDrawer1;
+    
     public bool isInInteractableUI;
 
 
@@ -66,6 +68,12 @@ public class Interaction : MonoBehaviour
                 {
                     padlockPuzzle1.SetActive(true);
                     UnlockCursor();
+                }
+
+                if (hit.transform.CompareTag("DeskDrawer1"))
+                {
+                    isInInteractableUI = false;
+                    DeskDrawer1.GetComponent<DeskDrawer1>().Open();
                 }
             }
         }
