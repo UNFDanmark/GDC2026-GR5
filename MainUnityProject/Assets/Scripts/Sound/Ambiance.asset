@@ -8,7 +8,7 @@ AudioContainerElement:
   m_PrefabAsset: {fileID: 0}
   m_Name: sample af vind_{-7613753238031151717}
   m_AudioClip: {fileID: 8300000, guid: ecf80091c6384a54bb72586223d255d9, type: 3}
-  m_Volume: -27
+  m_Volume: -20
   m_Enabled: 1
 --- !u!1233149941 &-6859271956047933225
 AudioContainerElement:
@@ -38,7 +38,7 @@ AudioContainerElement:
   m_PrefabAsset: {fileID: 0}
   m_Name: 8 minutters distorted SDU hal ambience_{-1399931983000102567}
   m_AudioClip: {fileID: 8300000, guid: 2612d968585df0542b3e308dd493fbce, type: 3}
-  m_Volume: -5
+  m_Volume: -10
   m_Enabled: 1
 --- !u!1233149941 &12837434989685221
 AudioContainerElement:
@@ -58,7 +58,7 @@ AudioContainerElement:
   m_PrefabAsset: {fileID: 0}
   m_Name: sample af vind_{5745061666113731143}
   m_AudioClip: {fileID: 8300000, guid: ecf80091c6384a54bb72586223d255d9, type: 3}
-  m_Volume: -27
+  m_Volume: -20
   m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
 AudioRandomContainer:
@@ -76,15 +76,15 @@ AudioRandomContainer:
   m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
   m_LoopCountRandomizationRange: {x: 0, y: 0}
   m_Elements:
-  - {fileID: -6859271956047933225}
+  - {fileID: -1399931983000102567}
   - {fileID: 5745061666113731143}
   - {fileID: -7613753238031151717}
   - {fileID: 12837434989685221}
   - {fileID: -6219540378463159652}
-  - {fileID: -1399931983000102567}
   - {fileID: 9057469388480629550}
+  - {fileID: -6859271956047933225}
   m_AvoidRepeatingLast: 0
-  m_PlaybackMode: 0
+  m_PlaybackMode: 1
   m_TriggerMode: 1
   m_AutomaticTriggerMode: 1
   m_LoopMode: 2
@@ -100,5 +100,5 @@ AudioContainerElement:
   m_PrefabAsset: {fileID: 0}
   m_Name: 8 minutters distorted SDU hal ambience_{9057469388480629550}
   m_AudioClip: {fileID: 8300000, guid: 2612d968585df0542b3e308dd493fbce, type: 3}
-  m_Volume: -5
+  m_Volume: -10
   m_Enabled: 1
