@@ -20,6 +20,8 @@ public class Interaction : MonoBehaviour
     
     public bool isInInteractableUI;
 
+    public AudioSource paperPickupSound;
+
 
     void Start()
     {
@@ -61,7 +63,8 @@ public class Interaction : MonoBehaviour
                 {
                     paperClue1.SetActive(true);
                     UnlockCursor();
-                    
+                    paperPickupSound.Play();
+
                 }
 
                 if (hit.transform.CompareTag("PadlockPuzzle1"))

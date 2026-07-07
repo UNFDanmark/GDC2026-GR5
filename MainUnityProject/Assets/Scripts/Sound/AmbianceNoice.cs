@@ -1,16 +1,27 @@
+using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AmbianceNoice : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public AudioSource audioSource;
+    public float musicCooldown;
+    public float cooldownRandomization;
+    float cooldownLeft;
+    
 
-    // Update is called once per frame
     void Update()
     {
-        
+
+        if (!audioSource.isPlaying)
+        {
+            cooldownLeft -= Time.deltaTime + UnityEngine.Random.Range(0, cooldownRandomization);
+
+            if (cooldownLeft <= 0)
+            {
+                audioSource.Play();
+                cooldownLeft = musicCooldown;
+            }
+        }
     }
 }
