@@ -16,6 +16,8 @@ public class PadlockPuzzle1 : MonoBehaviour
     
     float check = 0.5f;
     bool haveSolved;
+    
+    public AudioSource lockUnlockSound;
 
     void Start()
     {
@@ -67,6 +69,7 @@ public class PadlockPuzzle1 : MonoBehaviour
                     print("Lock Opened!");
                     check = 0.5f;
                     haveSolved = true;
+                    lockUnlockSound.Play();
                 }
             }
             else
