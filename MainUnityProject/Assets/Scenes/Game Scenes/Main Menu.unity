@@ -322,23 +322,23 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1019705642}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 27392df6d2f5a524fa7a6309becd1d26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7508364
+      value: 6.0875893
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27392df6d2f5a524fa7a6309becd1d26, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.93380004
+      value: -1.6708
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27392df6d2f5a524fa7a6309becd1d26, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.3465881
+      value: -7.252046
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27392df6d2f5a524fa7a6309becd1d26, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.88322943
+      value: 0.9561291
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27392df6d2f5a524fa7a6309becd1d26, type: 3}
       propertyPath: m_LocalRotation.x
@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27392df6d2f5a524fa7a6309becd1d26, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.46894127
+      value: 0.29294598
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 27392df6d2f5a524fa7a6309becd1d26, type: 3}
       propertyPath: m_LocalRotation.z
@@ -370,10 +370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 27392df6d2f5a524fa7a6309becd1d26, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1019705642}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27392df6d2f5a524fa7a6309becd1d26, type: 3}
 --- !u!4 &532712307 stripped
@@ -504,31 +501,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 532712307}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b1dff425c7da5b248903c34e8fa7653f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.105257
+      value: -5.501208
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1dff425c7da5b248903c34e8fa7653f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6708
+      value: 0.7369999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1dff425c7da5b248903c34e8fa7653f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.597147
+      value: -3.7410011
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1dff425c7da5b248903c34e8fa7653f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9561291
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1dff425c7da5b248903c34e8fa7653f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1dff425c7da5b248903c34e8fa7653f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.29294598
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1dff425c7da5b248903c34e8fa7653f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -564,6 +561,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b1dff425c7da5b248903c34e8fa7653f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2132804352}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b1dff425c7da5b248903c34e8fa7653f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 532712307}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1dff425c7da5b248903c34e8fa7653f, type: 3}
 --- !u!4 &1019705642 stripped
@@ -2122,5 +2122,5 @@ SceneRoots:
   - {fileID: 1842817813}
   - {fileID: 607679545}
   - {fileID: 199569278}
-  - {fileID: 532712306}
   - {fileID: 1508518508}
+  - {fileID: 1019705641}
