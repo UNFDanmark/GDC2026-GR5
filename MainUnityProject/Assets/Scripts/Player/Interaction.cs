@@ -21,8 +21,7 @@ public class Interaction : MonoBehaviour
     public bool isInInteractableUI;
 
     public AudioSource paperPickupSound;
-
-
+    
     void Start()
     {
         interactionAction.Enable();
