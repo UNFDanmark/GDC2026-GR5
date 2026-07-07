@@ -10,6 +10,7 @@ public class DeskDrawer1 : MonoBehaviour
     Vector3 StartPos;
     Vector3 EndPos;
     
+    
     public void Start()
     {
         StartPos = transform.position;
@@ -21,6 +22,7 @@ public class DeskDrawer1 : MonoBehaviour
     { 
         IsOpening = true;
         TimeToOpenLeft = TimeToOpen;
+        gameObject.layer = LayerMask.NameToLayer("Funiture");
     }
 
     public void Update()
