@@ -19,6 +19,11 @@ public class PadlockPuzzle1 : MonoBehaviour
     
     public AudioSource lockUnlockSound;
 
+    public GameObject puzzleBox;
+    public GameObject puzzleBoxUI;
+    public GameObject player;
+    public GameObject mainBox;
+
     void Start()
     {
         display1.text = txt1.ToString();
@@ -66,10 +71,13 @@ public class PadlockPuzzle1 : MonoBehaviour
 
                 if (check <= 0)
                 {
-                    print("Lock Opened!");
                     check = 0.5f;
                     haveSolved = true;
                     lockUnlockSound.Play();
+                    player.GetComponent<Interaction>().ExitInteractableUI();
+                    puzzleBoxUI.SetActive(false);
+                    puzzleBox.SetActive(false);
+                    mainBox.gameObject.layer = LayerMask.NameToLayer("Funiture");
                 }
             }
             else
