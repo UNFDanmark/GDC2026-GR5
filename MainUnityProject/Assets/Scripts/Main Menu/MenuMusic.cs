@@ -16,7 +16,6 @@ public class MenuMusic : MonoBehaviour
 
     void Update()
     {
-        print($"IsPlaying: {audioSource.isPlaying}, cooldown: {cooldownLeft}");
         
         if (audioSource.isPlaying)
         {

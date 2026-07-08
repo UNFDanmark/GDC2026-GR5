@@ -20,6 +20,26 @@ AudioContainerElement:
   m_AudioClip: {fileID: 8300000, guid: 70d6db096d804b242af948ceb7ad3f3d, type: 3}
   m_Volume: -15
   m_Enabled: 1
+--- !u!1233149941 &-998400249589909355
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2 - Lo-Fi_{-998400249589909355}
+  m_AudioClip: {fileID: 8300000, guid: 05f46acc2f312a84e98134a6325dfeb0, type: 3}
+  m_Volume: -5
+  m_Enabled: 1
+--- !u!1233149941 &5422732834374510190
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 3 - Creepy Lo-Fi_{5422732834374510190}
+  m_AudioClip: {fileID: 8300000, guid: 3045a4e616e038c4ba3d9983ee96e360, type: 3}
+  m_Volume: -10
+  m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
 AudioRandomContainer:
   m_ObjectHideFlags: 0
@@ -37,7 +57,9 @@ AudioRandomContainer:
   m_LoopCountRandomizationRange: {x: 0, y: 0}
   m_Elements:
   - {fileID: -6883722478646953555}
+  - {fileID: -998400249589909355}
   - {fileID: -2278464497611269225}
+  - {fileID: 5422732834374510190}
   m_AvoidRepeatingLast: 0
   m_PlaybackMode: 2
   m_TriggerMode: 0
