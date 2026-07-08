@@ -17,10 +17,15 @@ public class Interaction : MonoBehaviour
     public GameObject paperClue1;
     public GameObject padlockPuzzle1;
     public GameObject DeskDrawer1;
+    public GameObject key1;
+    public GameObject door1;
+    public GameObject DemoCompleteUI;
     
     public bool isInInteractableUI;
+    bool key1Gotten;
 
     public AudioSource paperPickupSound;
+    public AudioSource lockedDoorSound;
     
     void Start()
     {
@@ -76,6 +81,28 @@ public class Interaction : MonoBehaviour
                 {
                     isInInteractableUI = false;
                     DeskDrawer1.GetComponent<DeskDrawer1>().Open();
+                }
+
+                if (hit.transform.CompareTag("LockedDoor"))
+                {
+                    if (key1Gotten)
+                    {
+                        door1.SetActive(false);
+                        DemoCompleteUI.SetActive(true);
+                    }
+                    else
+                    {
+                        isInInteractableUI = false;
+                        lockedDoorSound.Play();
+                        
+                    }
+                }
+
+                if (hit.transform.CompareTag("Key1"))
+                {
+                    isInInteractableUI = false;
+                    key1.SetActive(false);
+                    key1Gotten = true;
                 }
             }
         }
