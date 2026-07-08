@@ -8,6 +8,8 @@ TagManager:
   - ChestPuzzle1
   - PadlockPuzzle1
   - DeskDrawer1
+  - Key1
+  - LockedDoor
   layers:
   - Default
   - TransparentFX
