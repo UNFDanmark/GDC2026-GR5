@@ -1,16 +1,36 @@
+using System;
 using UnityEngine;
 
 public class MenuMusic : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public AudioSource audioSource;
+    public float musicCooldown;
+    public float cooldownRandomization;
+    float cooldownLeft;
+    float calcRandom; 
+
     void Start()
     {
-        
+        cooldownLeft = musicCooldown;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+        if (audioSource.isPlaying)
+        {
+            calcRandom = UnityEngine.Random.Range(0, cooldownRandomization);
+        }
+
+        if (!audioSource.isPlaying)
+        {
+            cooldownLeft -= Time.deltaTime * calcRandom;
+
+            if (cooldownLeft <= 0)
+            {
+                audioSource.Play();
+                cooldownLeft = musicCooldown;
+            }
+        }
     }
 }
