@@ -132,6 +132,11 @@ public class Interaction : MonoBehaviour
             {
                 Key1Outline.SetActive(true);
             }
+
+            if (hit.transform.CompareTag("PaperClue1"))
+            {
+                PaperClue1Outline.SetActive(true);
+            }
             
         }
         else
@@ -141,6 +146,7 @@ public class Interaction : MonoBehaviour
             Door1Outline.SetActive(false);
             PadlockPuzzle1Outline.SetActive(false);
             Key1Outline.SetActive(false);
+            PaperClue1Outline.SetActive(true);
             
         }
     }
