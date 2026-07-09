@@ -4999,7 +4999,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a9ff592af8c0b9f48a87f71cd34338f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38bdb1b70b857794a8e6a1cc94a7eb67, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6036,7 +6036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1104504476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13676,6 +13676,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 719792628683938701, guid: 478db531712316941ad62944f7c02f4c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174770011603586256, guid: 478db531712316941ad62944f7c02f4c, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
