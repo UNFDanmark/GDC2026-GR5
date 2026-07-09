@@ -96,6 +96,7 @@ public class Interaction : MonoBehaviour
                     {
                         door1.SetActive(false);
                         DemoCompleteUI.SetActive(true);
+                        UnlockCursor();
                     }
                     else
                     {
