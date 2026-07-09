@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class MenuMusic : MonoBehaviour
@@ -16,10 +15,9 @@ public class MenuMusic : MonoBehaviour
 
     void Update()
     {
-        print(cooldownLeft);
         if (audioSource.isPlaying)
         {
-            calcRandom = UnityEngine.Random.Range(0, cooldownRandomization);
+            calcRandom = Random.Range(0, cooldownRandomization);
         }
 
         if (!audioSource.isPlaying)

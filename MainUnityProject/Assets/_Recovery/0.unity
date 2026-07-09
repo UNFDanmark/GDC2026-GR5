@@ -5177,7 +5177,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 6418180475301049370, guid: 28d50afc294aada49bd1ceba253450d2, type: 2}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5289,6 +5289,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fd02610818fc04fbccf08bbc55bcf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  Black: {fileID: 1353188174}
+  Lore1: {fileID: 1704983750}
+  Lore2: {fileID: 854073785}
+  speed: 5
+  blackMultiplier: 1
+  loreMultiplier: 1
 --- !u!1001 &1877368916
 PrefabInstance:
   m_ObjectHideFlags: 0
