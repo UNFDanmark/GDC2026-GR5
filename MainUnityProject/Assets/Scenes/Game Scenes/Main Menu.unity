@@ -5198,7 +5198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MenuMusic
   audioSource: {fileID: 1842817815}
   musicCooldown: 120
-  cooldownRandomization: 5
+  cooldownRandomization: 90
 --- !u!114 &1842817817
 MonoBehaviour:
   m_ObjectHideFlags: 0
