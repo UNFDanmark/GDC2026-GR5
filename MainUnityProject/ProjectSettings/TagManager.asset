@@ -10,6 +10,7 @@ TagManager:
   - DeskDrawer1
   - Key1
   - LockedDoor
+  - InteractionOutline
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - Interactables
   - Funiture
-  - 
+  - InteratableOutline
   - 
   - 
   - 
