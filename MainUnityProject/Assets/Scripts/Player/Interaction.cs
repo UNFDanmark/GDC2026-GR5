@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.Embree;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,6 +21,12 @@ public class Interaction : MonoBehaviour
     public GameObject key1;
     public GameObject door1;
     public GameObject DemoCompleteUI;
+
+    public GameObject DeskDrawer1Outline;
+    public GameObject Door1Outline;
+    public GameObject Key1Outline;
+    public GameObject PadlockPuzzle1Outline;
+    public GameObject PaperClue1Outline;
     
     public bool isInInteractableUI;
     bool key1Gotten;
@@ -105,10 +112,35 @@ public class Interaction : MonoBehaviour
                     key1Gotten = true;
                 }
             }
+
+            if (hit.transform.CompareTag("DeskDrawer1"))
+            {
+                DeskDrawer1Outline.SetActive(true);
+            }
+
+            if (hit.transform.CompareTag("LockedDoor"))
+            {
+                Door1Outline.SetActive(true);
+            }
+
+            if (hit.transform.CompareTag("PadlockPuzzle1"))
+            {
+                PadlockPuzzle1Outline.SetActive(true);
+            }
+
+            if (hit.transform.CompareTag("Key1"))
+            {
+                Key1Outline.SetActive(true);
+            }
+            
         }
         else
         {
             e.SetActive(false);
+            DeskDrawer1Outline.SetActive(false);
+            Door1Outline.SetActive(false);
+            PadlockPuzzle1Outline.SetActive(false);
+            Key1Outline.SetActive(false);
             
         }
     }
