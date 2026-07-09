@@ -4435,6 +4435,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9142895729768950176, guid: 66c54ede7fb7f874a94a65bf31182e1c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b49f459a9bd70cc4e8bdda015159a0e6, type: 2}
     - target: {fileID: -8679921383154817045, guid: 66c54ede7fb7f874a94a65bf31182e1c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0280012
@@ -4491,6 +4495,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2282336565629869385, guid: 66c54ede7fb7f874a94a65bf31182e1c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3cc34463356c39e4b8d727c5b91b499d, type: 2}
     - target: {fileID: 919132149155446097, guid: 66c54ede7fb7f874a94a65bf31182e1c, type: 3}
       propertyPath: m_Name
       value: inc and pen
